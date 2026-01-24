@@ -1,50 +1,60 @@
-# Dental Clinic Management System
+# Dental Clinic Management System (DCMS)
 
-# Requirements
-- IntelliJ IDEA is highly recommended (other IDEs can also be used)
-- JDK 17 (ensure that your JAVA_HOME environment variable is set to the path to your JDK 17 installation, or that your IDE is using JDK 17)
-- Maven (should be included with IntelliJ IDEA and Eclipse)
+A full-stack web application built with **Spring Boot** and **Maven** to manage dental clinic operations such as patients, appointments, staff, and treatments. This project demonstrates relational database design, SQL-backed CRUD flows, and a clean MVC architecture.
 
-# Setting Up the Database
+---
 
-The database to be used by the application needs to be set up locally.
+## Features
+- Patient registration and management
+- Appointment scheduling and viewing
+- Employee and branch management
+- Treatment tracking
+- User authentication
+- Server-side rendered UI using templates (Thymeleaf)
 
-1. Create a new database with PostgreSQL called "dcms"
-2. Right click on the newly-created database's name, then click on "Query Tool"
-3. Open the schema file of the database, then execute the script (F5)
-4. Open the mock data file, then execute the script
+---
 
-# Setting Up an Account
+## Tech Stack
+- **Backend:** Java, Spring Boot
+- **Build:** Maven
+- **Database:** SQL (JDBC / RowMappers)
+- **Frontend:** Thymeleaf, HTML, CSS
+- **Architecture:** MVC
 
-Creating a new account in pgAdmin is highly recommended. Alternatively, refer to the "Modifying the Application Properties" section to change the
-account details used to access the database.
+---
 
-1. In pgAdmin, right-click on Login/Group Roles, then click on Create > Login/Group Role
-2. Set the name to be "test" in the General tab
-3. In the Defintion tab, set the password to be "test
-4. In the Privileges tab, turn on the following:
-   - Can login?
-   - Superuser?
-   - Inherit rights from the parent roles?
-5. In the Membership tab, assign the following roles to this user with admin privileges:
-   - pg_read_all_data
-   - pg_write_all_data
-6. Save the new account
+## Project Structure
 
-# Modifying the Application Properties
+src/main/java/com/dcms/dcms
+├── controllers # Web routes & request handling
+├── models # Domain models
+├── mappers # SQL RowMappers
+└── DcmsApplication.java
 
-If another user account will be used to access the database, then the `application.properties` file in `src/main/resources` must be modified.
+src/main/resources
+├── templates # Thymeleaf views
+└── static/css # Styles
 
-Set the username and password in the following lines:<br>
-`spring.datasource.username=test`<br>
-`spring.datasource.password=test`<br>
 
-Ensure that modified versions this file are **NOT** commited to the repository, otherwise your user data will be exposed to everyone 
-who has access to this repository.
+---
 
-# Running the Application
+## How to Run
 
-- If using a Java IDE, simply build and run the application
-- Otherwise, run the application using the command line with `./mvnw spring-boot:run`
-- Visit `http://localhost:8080/` to access the index page
-- Visit `http://localhost:8080/login` to log in with an account in the "user_account" table of the database
+### Requirements
+- Java 11+
+- Maven
+- A SQL database (configured in `application.properties`)
+
+### Setup
+1) Configure your DB credentials in:
+
+src/main/resources/application.properties
+
+
+2) Run the application:
+```bash
+mvn spring-boot:run
+
+3) Open in browser:
+
+http://localhost:8080
