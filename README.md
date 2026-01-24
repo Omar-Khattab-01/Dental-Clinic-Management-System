@@ -24,16 +24,17 @@ A full-stack web application built with **Spring Boot** and **Maven** to manage 
 ---
 
 ## Project Structure
-
+```
 src/main/java/com/dcms/dcms
-├── controllers # Web routes & request handling
-├── models # Domain models
-├── mappers # SQL RowMappers
+├── controllers      # Web routes & request handling
+├── models           # Domain models
+├── mappers          # SQL RowMappers
 └── DcmsApplication.java
 
 src/main/resources
-├── templates # Thymeleaf views
-└── static/css # Styles
+├── templates        # Thymeleaf views
+└── static/css       # Styles
+```
 
 
 ---
@@ -54,7 +55,9 @@ src/main/resources/application.properties
 2) Run the application:
 ```bash
 mvn spring-boot:run
+```
 
 3) Open in browser:
-
+```
 http://localhost:8080
+```
