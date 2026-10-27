@@ -1,63 +1,18 @@
-# Dental Clinic Management System (DCMS)
+# Dental Clinic Management System
 
-A full-stack web application built with **Spring Boot** and **Maven** to manage dental clinic operations such as patients, appointments, staff, and treatments. This project demonstrates relational database design, SQL-backed CRUD flows, and a clean MVC architecture.
+I worked on this dental clinic management project to connect patient and appointment workflows with a relational database. It brings clinic records into a web interface where users can review patient information and manage appointments.
 
----
+## What it does
 
-## Features
-- Patient registration and management
-- Appointment scheduling and viewing
-- Employee and branch management
-- Treatment tracking
-- User authentication
-- Server-side rendered UI using templates (Thymeleaf)
+- Sign users in and maintain a session.
+- List patients and add or edit patient details.
+- Show patient records and medical history.
+- Create appointments and review appointment lists and details.
+- Associate appointments with patients, dentists, branches, and treatment information.
+- Present different appointment views according to the signed-in user's role.
 
----
+## Project approach
 
-## Tech Stack
-- **Backend:** Java, Spring Boot
-- **Build:** Maven
-- **Database:** SQL (JDBC / RowMappers)
-- **Frontend:** Thymeleaf, HTML, CSS
-- **Architecture:** MVC
+The application uses Java, Spring Boot, JDBC, and Thymeleaf. Controllers connect the web pages to SQL queries, while models and row mappers represent the related clinic records.
 
----
-
-## Project Structure
-```
-src/main/java/com/dcms/dcms
-├── controllers      # Web routes & request handling
-├── models           # Domain models
-├── mappers          # SQL RowMappers
-└── DcmsApplication.java
-
-src/main/resources
-├── templates        # Thymeleaf views
-└── static/css       # Styles
-```
-
-
----
-
-## How to Run
-
-### Requirements
-- Java 11+
-- Maven
-- A SQL database (configured in `application.properties`)
-
-### Setup
-1) Configure your DB credentials in:
-
-src/main/resources/application.properties
-
-
-2) Run the application:
-```bash
-mvn spring-boot:run
-```
-
-3) Open in browser:
-```
-http://localhost:8080
-```
+My focus in presenting this coursework is the relationship between the database model and the clinic workflows visible in the application. It is an academic project.
